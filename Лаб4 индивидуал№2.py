@@ -7,15 +7,21 @@
 
 
 if __name__ == '__main__':
-    Word = input("Введите словосочетание ")
-    for i in range(len(Word)):
-        if (Word[-1] == 'ч' or Word[-1] == 'щ') and Word[2] != 'а':
-           input("Вы написали все верно")
-        else:
-           r = Word.replace('щя','ща')
-           b = Word.replace('чя', 'ча')
-        print("Исправленное буквосочетание:",r,b)
-        input("Вы написали буквосочетание Ча Ща неверно ")
+    s = input('Введите слова: ')
+    a = s.find('ча')
+    b = s.find('чя')
+    if a > -1:
+        print('ча написанно правильно')
+    if b > -1:
+        print('ча написанно неправильно')
+    c = s.find('ща')
+    d = s.find('щя')
+    if c > -1:
+        print('ща написанно правильно')
+    if d > -1:
+        print('ща написанно неправильно')
+    s = s.replace('чя', 'ча').replace('щя', 'ща')
+    print(s)
 
 
 
